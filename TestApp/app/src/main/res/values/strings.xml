@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Test App</string>
-    <string name="start_game">Start Game</string>
-    <string name="correct_guess">You\'re right!</string>
-    <string name="incorrect_guess">Nope, try again</string>
-    <string name="start_over">Start Over</string>
-
-</resources>
