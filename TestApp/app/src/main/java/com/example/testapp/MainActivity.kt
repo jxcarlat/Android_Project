@@ -10,8 +10,8 @@ import com.example.testapp.R
 import java.util.Random
 
 const val SHARED_PREFS_FILE = "com.example.testapp.SHARED_PREFS"
-const val KEY_ANSWER = "com.example.testapp.KEY_ANSWER"
-const val KEY_GUESS = "com.example.testapp.KEY_GUESS"
+const val KEY_SCORE = "com.example.testapp.KEY_SCORE"
+const val KEY_QUESTION_INDEX = "com.example.testapp.KEY_QUESTION_INDEX"
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,13 +21,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startGame(view: View) {
-        val theAnswer: Boolean = true
-        Log.d("MPK_UTILITY", "The Answer: " + theAnswer.toString())
+
+        //Set score to 0 in shared preferences
         val sharedPreferences =
                 getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE)
 
+
         val editor = sharedPreferences.edit()
-        editor.putBoolean(KEY_ANSWER, theAnswer)
+        editor.putInt(KEY_SCORE, 0)
+        editor.putInt(KEY_QUESTION_INDEX, 0)
         editor.apply()
         val intent = Intent(this, GuessActivity::class.java)
         startActivity(intent)
