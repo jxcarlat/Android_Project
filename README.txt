@@ -1,0 +1,2 @@
+This is a kotlin trivia quiz app. I made this app in Mobile Applications class at UALR as our first project.
+The goal of this app is to ask the user 5 questions and then show our results screen at the end of the 5 questions.
